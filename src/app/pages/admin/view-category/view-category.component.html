@@ -1,0 +1,33 @@
+<!-- <mat-card>
+    <mat-list>
+        <div mat-subheader>All Categories</div>
+        <mat-list-item *ngFor="let item of categories">
+            <mat-icon mat-list-icon>category</mat-icon>
+            <div mat-line>{{ item.title }}</div>
+            <div mat-line>{{ item.description }}</div>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+        
+    </mat-list>
+</mat-card> -->
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">All Categories</h5>
+    </div>
+    <ul class="list-group list-group-flush" *ngFor="let item of categories">
+        <li class="list-group-item d-flex align-items-center">
+            <i class="material-icons me-2">category</i>
+            <div class="flex-grow-1">
+                <div class="fw-bold">{{item.title}}</div>
+                <div class="text-muted">{{item.description}}</div>
+            </div>
+        </li>
+        
+        <!-- <div class="text-center"><button class="btn btn-info m-2">Add new Category</button></div> -->
+        
+        <!-- Add more categories as needed -->
+    </ul>
+    
+</div>
+<div class="text-center"><button routerLink="/admin/add-category" class="btn"> Add new Category
+</button></div>

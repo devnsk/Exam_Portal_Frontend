@@ -1,0 +1,44 @@
+<div class="card mt-3">
+    <div class="card-header text-center">
+        {{category | json}}
+        <h1>Add New Category</h1>
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form id="categoryForm" (ngSubmit)="formSubmit()">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input
+                                required
+                                type="text"
+                                class="form-control animated-input"
+                                id="title"
+                                name="title"
+                                placeholder="Enter here"
+                                [(ngModel)]="category.title"
+                            />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea
+                                class="form-control animated-input"
+                                id="description"
+                                name="description"
+                                placeholder="Enter Category Description"
+                                rows="5"
+                                [(ngModel)]="category.description"
+                            ></textarea>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

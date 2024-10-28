@@ -1,0 +1,12 @@
+.webcam-container {
+    width: 200px; /* Set your desired width */
+    height: 150px; /* Set your desired height */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  webcam {
+    width: 100%; /* Make webcam fill the container */
+    height: 100%; /* Make webcam fill the container */
+    object-fit:contain; /* Maintain aspect ratio and show the whole video */
+  }
+  
